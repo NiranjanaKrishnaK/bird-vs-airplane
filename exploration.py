@@ -6,7 +6,6 @@ from utils import get_filtered_dataset
 # Load dataset
 dataset = get_filtered_dataset(train=True)
 
-# Helper to undo normalization
 def denormalize(img):
     img = img * 0.5 + 0.5  # undo normalization (mean=0.5, std=0.5)
     return img.clamp(0, 1)
@@ -26,3 +25,4 @@ plt.tight_layout()
 os.makedirs("results", exist_ok=True)
 plt.savefig("results/exploration.png")
 plt.show()
+
