@@ -27,7 +27,7 @@ Sample images:
 ├── train.py            # Training + validation loop
 ├── exploration.py      # Dataset visualization
 ├── requirements.txt    # Dependencies
-├── results/            # Metrics & plots
+├── results/ (exploration.png file and metrices.png file)            # Metrics & plots
 └── README.md           # Project description
 ```
 
@@ -52,4 +52,5 @@ Sample images:
 4. Explore dataset:
    ```bash
    python exploration.py
+
    ```
