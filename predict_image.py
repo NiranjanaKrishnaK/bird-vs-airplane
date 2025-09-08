@@ -18,8 +18,8 @@ transform = transforms.Compose([
     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
 ])
 
-# Load your image
-img_path = img_path = r"C:\Users\niran\OneDrive\Desktop\airplane.jpg" # Give the path of the image to be predicted
+# Load your image by giving the path of the image to be predicted ( it should be in RGB format and not in grey scale )
+img_path = img_path = r"C:\Users\niran\OneDrive\Desktop\airplane.jpg"
 image = Image.open(img_path).convert("RGB")
 image_tensor = transform(image).unsqueeze(0).to(device)  # Add batch dimension
 
@@ -30,3 +30,4 @@ _, predicted = torch.max(output, 1)
 # Map to labels
 labels = {0: "Airplane", 1: "Bird"}
 print(f"Predicted label: {labels[predicted.item()]}")
+
